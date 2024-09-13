@@ -1,7 +1,4 @@
-from src.knowlegde_base_loader import knowledge_base_loader
-
-
-def inference_engine(input_data, knowledge_base=knowledge_base_loader()):
+def inference_engine(input_data, knowledge_base):
     recommendations_dict = {}
 
     for rule in knowledge_base:

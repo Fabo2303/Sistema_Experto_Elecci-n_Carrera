@@ -1,7 +1,7 @@
 def knowledge_base_loader():
     knowledge_base = []
 
-    with open('../data/knowledge_base.txt', 'r', encoding='utf-8') as file:
+    with open('data/knowledge_base.txt', 'r', encoding='utf-8') as file:
         for line in file:
             line = line.strip()
             if line and not line.startswith('#'):
