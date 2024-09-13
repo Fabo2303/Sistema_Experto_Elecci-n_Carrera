@@ -1,0 +1,61 @@
+interes=ciencia, habilidad=matemáticas, entorno=investigación, valor=innovación, aptitud=alto : carrera=ingeniería de sistemas
+interes=salud, habilidad=comunicación, entorno=trabajo clínico, valor=servicio, aptitud=alto : carrera=medicina
+interes=artes, habilidad=creatividad, entorno=oficina, valor=creatividad, aptitud=alto : carrera=arte
+interes=tecnología, habilidad=razonamiento lógico, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería de software
+interes=sociales, habilidad=comunicación, entorno=trabajo de campo, valor=servicio, aptitud=medio : carrera=trabajo social
+interes=ciencia, habilidad=matemáticas, entorno=trabajo de campo, valor=seguridad, aptitud=medio : carrera=ingeniería civil
+interes=salud, habilidad=habilidades manuales, entorno=trabajo clínico, valor=estabilidad, aptitud=medio : carrera=odontología
+interes=humanidades, habilidad=comunicación, entorno=oficina, valor=creatividad, aptitud=alto : carrera=literatura
+interes=ciencia, habilidad=química, entorno=investigación, valor=innovación, aptitud=alto : carrera=ingeniería química
+interes=tecnología, habilidad=razonamiento lógico, entorno=oficina, valor=seguridad, aptitud=medio : carrera=computación científica
+interes=ciencia, habilidad=biología, entorno=investigación, valor=innovación, aptitud=alto : carrera=ciencias biológicas
+interes=salud, habilidad=química, entorno=trabajo clínico, valor=estabilidad, aptitud=alto : carrera=farmacia y bioquímica
+interes=tecnología, habilidad=electrónica, entorno=trabajo de campo, valor=innovación, aptitud=medio : carrera=ingeniería electrónica
+interes=salud, habilidad=comunicación, entorno=oficina, valor=servicio, aptitud=medio : carrera=psicología
+interes=sociales, habilidad=comunicación, entorno=investigación, valor=servicio, aptitud=alto : carrera=sociología
+interes=humanidades, habilidad=escritura, entorno=oficina, valor=creatividad, aptitud=alto : carrera=filosofía
+interes=ciencia, habilidad=física, entorno=investigación, valor=innovación, aptitud=alto : carrera=física
+interes=salud, habilidad=habilidades manuales, entorno=trabajo clínico, valor=estabilidad, aptitud=alto : carrera=enfermería
+interes=tecnología, habilidad=telecomunicaciones, entorno=oficina, valor=innovación, aptitud=medio : carrera=ingeniería de telecomunicaciones
+interes=humanidades, habilidad=lectura, entorno=oficina, valor=estabilidad, aptitud=alto : carrera=historia
+interes=salud, habilidad=biología, entorno=investigación, valor=servicio, aptitud=medio : carrera=medicina veterinaria
+interes=sociales, habilidad=comunicación, entorno=oficina, valor=servicio, aptitud=alto : carrera=derecho
+interes=salud, habilidad=matemáticas, entorno=trabajo clínico, valor=estabilidad, aptitud=medio : carrera=obstetricia
+interes=ciencia, habilidad=estadística, entorno=investigación, valor=innovación, aptitud=alto : carrera=estadística
+interes=humanidades, habilidad=comunicación, entorno=oficina, valor=creatividad, aptitud=medio : carrera=lingüística
+interes=salud, habilidad=biología, entorno=trabajo clínico, valor=servicio, aptitud=alto : carrera=genética y biotecnología
+interes=ciencia, habilidad=matemáticas, entorno=oficina, valor=estabilidad, aptitud=alto : carrera=investigación operativa
+interes=artes, habilidad=restauración, entorno=trabajo de campo, valor=creatividad, aptitud=medio : carrera=conservación y restauración
+interes=ciencia, habilidad=química, entorno=investigación, valor=innovación, aptitud=alto : carrera=química
+interes=sociales, habilidad=comunicación, entorno=investigación, valor=servicio, aptitud=alto : carrera=ciencia política
+interes=tecnología, habilidad=ingeniería, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería eléctrica
+interes=ciencia, habilidad=matemáticas, entorno=trabajo de campo, valor=seguridad, aptitud=medio : carrera=ingeniería geológica
+interes=salud, habilidad=habilidades manuales, entorno=trabajo clínico, valor=estabilidad, aptitud=medio : carrera=tecnología médica
+interes=artes, habilidad=danza, entorno=trabajo de campo, valor=creatividad, aptitud=medio : carrera=danza
+interes=tecnología, habilidad=ingeniería, entorno=trabajo de campo, valor=innovación, aptitud=alto : carrera=ingeniería en minas
+interes=ciencia, habilidad=matemáticas, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería geográfica
+interes=tecnología, habilidad=ingeniería, entorno=trabajo de campo, valor=innovación, aptitud=medio : carrera=ingeniería mecánica de fluidos
+interes=ciencia, habilidad=matemáticas, entorno=trabajo de campo, valor=seguridad, aptitud=medio : carrera=ingeniería metalúrgica
+interes=salud, habilidad=biología, entorno=investigación, valor=servicio, aptitud=alto : carrera=nutrición
+interes=sociales, habilidad=comunicación, entorno=investigación, valor=servicio, aptitud=medio : carrera=economía internacional
+interes=sociales, habilidad=comunicación, entorno=investigación, valor=servicio, aptitud=medio : carrera=economía pública
+interes=ciencia, habilidad=matemáticas, entorno=oficina, valor=innovación, aptitud=medio : carrera=ciencia y tecnología de alimentos
+interes=sociales, habilidad=comunicación, entorno=trabajo de campo, valor=servicio, aptitud=medio : carrera=comunicación social
+interes=tecnología, habilidad=matemáticas, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería industrial
+interes=ciencia, habilidad=biología, entorno=investigación, valor=innovación, aptitud=alto : carrera=microbiología y parasitología
+interes=tecnología, habilidad=matemáticas, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería de seguridad y salud en el trabajo
+interes=sociales, habilidad=comunicación, entorno=trabajo de campo, valor=servicio, aptitud=alto : carrera=antropología
+interes=sociales, habilidad=comunicación, entorno=investigación, valor=servicio, aptitud=alto : carrera=arqueología
+interes=salud, habilidad=química, entorno=investigación, valor=innovación, aptitud=medio : carrera=toxicología
+interes=ciencia, habilidad=química, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería textil
+interes=agricultura, habilidad=matemáticas, entorno=oficina, valor=innovación, aptitud=alto : carrera=ingeniería agroindustrial
+interes=negocios, habilidad=comunicación, entorno=oficina, valor=eficiencia, aptitud=alto : carrera=administración
+interes=negocios internacionales, habilidad=comunicación, entorno=oficina, valor=globalización, aptitud=alto : carrera=administración de negocios internacionales
+interes=turismo, habilidad=comunicación, entorno=trabajo de campo, valor=servicio, aptitud=medio : carrera=administración de turismo
+interes=información, habilidad=organización, entorno=oficina, valor=precisión, aptitud=alto : carrera=bibliotecología y ciencias de la información
+interes=matemáticas, habilidad=análisis, entorno=investigación, valor=innovación, aptitud=alto : carrera=ciencias matemáticas
+interes=finanzas, habilidad=comunicación, entorno=oficina, valor=precisión, aptitud=medio : carrera=contabilidad
+interes=economía, habilidad=análisis, entorno=oficina, valor=eficiencia, aptitud=alto : carrera=economía
+interes=educación, habilidad=comunicación, entorno=oficina, valor=creatividad, aptitud=alto : carrera=educación
+interes=deportes, habilidad=motivación, entorno=campo, valor=salud, aptitud=medio : carrera=educación física
+interes=geografía, habilidad=análisis espacial, entorno=trabajo de campo, valor=exploración, aptitud=medio : carrera=geografía
