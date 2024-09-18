@@ -19,6 +19,7 @@ def hello_world():
 def knowledge():
     if request.is_json:
         input_data = request.json.get('input_data', {})
+        print(input_data)
         if input_data:
             recommendations = inference_engine(input_data, knowledge_base)
             return jsonify(recommendations)

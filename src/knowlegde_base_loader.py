@@ -4,13 +4,13 @@ def knowledge_base_loader():
     with open('data/knowledge_base.txt', 'r', encoding='utf-8') as file:
         for line in file:
             line = line.strip()
-            if line and not line.startswith('#'):
-                parts = line.split(' : ')  # split the line in rule and conclusion
-                conditions_str = parts[0].strip()  # rule_#: conditions
+            if line:
+                parts = line.split(' THEN ')
+                conditions_str = parts[0].strip()
                 conclusion = parts[1].strip()
 
                 conditions = {}
-                for condition in conditions_str.split(','):
+                for condition in conditions_str.split(' AND '):
                     key, value = condition.split('=')
                     conditions[key.strip()] = value.strip()
 
