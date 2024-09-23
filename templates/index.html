@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Películas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            font-weight: bold;
+            color: #b0b0b0;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        select, input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        #peliculas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #peliculas div {
+            background-color: #1e1e1e;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 200px;
+        }
+
+        #peliculas img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #peliculas h3 {
+            font-size: 1.1em;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+
+        #peliculas p {
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            form {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            #peliculas {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Recomendador de Películas</h1>
+
+    <form id="recommenderForm" action="#" method="post">
+        <label for="genero">Género:</label><br>
+        <input type="checkbox" id="animacion" name="genero" value="animacion"> Animación<br>
+        <input type="checkbox" id="comedia" name="genero" value="comedia"> Comedia<br>
+        <input type="checkbox" id="drama" name="genero" value="drama"> Drama<br>
+        <input type="checkbox" id="fantasia" name="genero" value="fantasia"> Fantasía<br>
+        <input type="checkbox" id="romance" name="genero" value="romance"> Romance<br>
+        <input type="checkbox" id="familia" name="genero" value="familia"> Familia<br>
+        <input type="checkbox" id="aventura" name="genero" value="aventura"> Aventura<br>
+        <input type="checkbox" id="terror" name="genero" value="terror"> Terror<br>
+        <input type="checkbox" id="thriller" name="genero" value="thriller"> Thriller<br>
+        <input type="checkbox" id="accion" name="genero" value="accion"> Acción<br>
+        <input type="checkbox" id="musica" name="genero" value="musica"> Música<br>
+
+        <br><br>
+
+        <label for="anio">Año de Preferencia:</label>
+        <select id="anio" name="anio">
+            <option value="clasica">Clásica</option>
+            <option value="reciente">Reciente</option>
+        </select>
+
+        <br><br>
+
+        <label for="duracion">Duración Preferida:</label>
+        <select id="duracion" name="duracion">
+            <option value="corta">Corta (menos de 90 min)</option>
+            <option value="mediana">Mediana (90-150 min)</option>
+            <option value="larga">Larga (más de 150 min)</option>
+        </select>
+
+        <br><br>
+
+        <label for="motivo">Motivo:</label>
+        <select id="motivo" name="motivo">
+            <option value="reflexionar">Reflexionar</option>
+            <option value="relajarse">Relajarse</option>
+            <option value="reir">Reír</option>
+            <option value="asustarse">Asustarse</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Recomendar Película">
+    </form>
+
+    <h2>Películas Recomendadas:</h2>
+    <div id="peliculas">
+        <!-- Aquí se mostrarán los resultados según la selección -->
+    </div>
+
+    <script>
+        const form = document.getElementById('recommenderForm');
+        const peliculasDiv = document.getElementById('peliculas');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Obtener los géneros seleccionados a través de los checkboxes
+            const generos = Array.from(document.querySelectorAll('input[name="genero"]:checked')).map(checkbox => checkbox.value).join(',');
+
+            const anio = document.getElementById('anio').value;
+            const duracion = document.getElementById('duracion').value;
+            const motivo = document.getElementById('motivo').value;
+
+            const input_data = {
+                genero: generos,  // Concatenar los géneros seleccionados
+                anio: anio,
+                duracion: duracion,
+                motivo: motivo
+            };
+
+            // Enviar los datos al servidor
+            fetch('/recommendation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input_data: input_data })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    peliculasDiv.innerHTML = `<p>${data.error}</p>`;
+                } else {
+                    // Limpiar la división de recomendaciones anteriores
+                    peliculasDiv.innerHTML = '';
+
+                    // Iterar sobre la lista de películas recomendadas
+                    data.forEach(pelicula => {
+                        const [titulo, imagen, coincidencia] = pelicula;
+
+                        // Crear elementos HTML para cada película recomendada
+                        const peliculaContainer = document.createElement('div');
+                        peliculaContainer.innerHTML = `
+                            <h3>${titulo} (Coincidencia: ${coincidencia})</h3>
+                            <img src="${imagen}" alt="${titulo}" style="width:200px;">
+                            <br><br>
+                        `;
+                        peliculasDiv.appendChild(peliculaContainer);
+                    });
+                }
+            })
+            .catch(error => {
+                peliculasDiv.innerHTML = '<p>Error al obtener la recomendación.</p>';
+            });
+        });
+    </script>
+</body>
+</html>

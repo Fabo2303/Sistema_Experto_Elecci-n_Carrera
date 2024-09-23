@@ -17,14 +17,6 @@ def inference_engine(input_data, knowledge_base):
                 # Comparar valores directamente
                 if input_data.get(cond, None) == value:
                     match_count += 1
-            elif cond == 'calificacion':
-                # Extraer el operador y el valor para comparar calificaciones
-                operator = value[0]
-                threshold = float(value[1:])
-                if operator == '>' and float(input_data.get('calificacion', 0)) > threshold:
-                    match_count += 1
-                elif operator == '<' and float(input_data.get('calificacion', 0)) < threshold:
-                    match_count += 1
 
         # Si hay 3 o más coincidencias, agregar la carrera (en este caso, la película) a las recomendaciones
         if match_count >= 3:

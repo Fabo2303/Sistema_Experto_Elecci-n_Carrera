@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from src.knowlegde_base_loader import knowledge_base_loader
 from src.inference_engine import inference_engine
@@ -11,15 +11,14 @@ knowledge_base = knowledge_base_loader()
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def index():
+    return render_template('index.html')
 
 
 @app.route('/recommendation', methods=['POST'])
 def knowledge():
     if request.is_json:
         input_data = request.json.get('input_data', {})
-        print(input_data)
         if input_data:
             recommendations = inference_engine(input_data, knowledge_base)
             return jsonify(recommendations)
