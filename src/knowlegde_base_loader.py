@@ -12,7 +12,11 @@ def knowledge_base_loader():
                 conditions = {}
                 for condition in conditions_str.split(' AND '):
                     key, value = condition.split('=')
-                    conditions[key.strip()] = value.strip()
+                    # si value tiene { entonces debemos tratarlo como un conjunto
+                    if '{' in value:
+                        conditions[key.strip()] = value.strip('{}').split(',')
+                    else:
+                        conditions[key.strip()] = value.strip()
 
                 career = conclusion.split('=')[1].strip()
                 knowledge_base.append({
