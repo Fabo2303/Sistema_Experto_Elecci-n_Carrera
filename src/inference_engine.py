@@ -4,14 +4,9 @@ def inference_engine(input_data, knowledge_base):
     for rule in knowledge_base:
         conditions = rule['conditions']
         match_count = 0
-
-        # si es un arreglo debe comparar uno por uno
         for cond, value in conditions.items():
-            # genero ['animacion', 'comedia', 'drama']
-            # si value es un conjunto entonces debemos comparar uno por uno con input_data
             if isinstance(value, list):
                 for v in value:
-                    print(input_data.get(cond, '').split(','))
                     if v in input_data.get(cond, '').split(','):
                         match_count += 1
                         break
