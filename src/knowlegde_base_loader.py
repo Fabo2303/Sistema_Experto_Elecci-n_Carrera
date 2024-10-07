@@ -8,20 +8,17 @@ def knowledge_base_loader():
                 parts = line.split(' THEN ')
                 conditions_str = parts[0].strip()
                 conclusion = parts[1].strip()
-
                 conditions = {}
                 for condition in conditions_str.split(' AND '):
                     key, value = condition.split('=')
-                    # si value tiene { entonces debemos tratarlo como un conjunto
                     if '{' in value:
                         conditions[key.strip()] = value.strip('{}').split(',')
                     else:
                         conditions[key.strip()] = value.strip()
-
-                career = conclusion.split('=')[1].strip()
+                movie = conclusion.split('=')[1].strip()
                 knowledge_base.append({
                     'conditions': conditions,
-                    'career': career
+                    'movie': movie
                 })
 
     return knowledge_base

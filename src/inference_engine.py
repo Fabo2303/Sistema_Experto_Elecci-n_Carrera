@@ -9,14 +9,12 @@ def inference_engine(input_data, knowledge_base):
                 for v in value:
                     if v in input_data.get(cond, '').split(','):
                         match_count += 1
-                        break
             else:
                 if value == input_data.get(cond, ''):
                     match_count += 1
 
-        # Si hay 3 o más coincidencias, agregar la carrera (en este caso, la película) a las recomendaciones
         if match_count >= 3:
-            movie_data = rule['career'].strip('{}').split(',')
+            movie_data = rule['movie'].strip('{}').split(',')
             movie_title = movie_data[0].strip()
             movie_link = movie_data[1].strip()
             recommendations_dict[movie_title] = {
@@ -24,10 +22,8 @@ def inference_engine(input_data, knowledge_base):
                 'link': movie_link
             }
 
-    # Ordenar recomendaciones por coincidencias
     sorted_recommendations = sorted(recommendations_dict.items(), key=lambda x: x[1]['matches'], reverse=True)
 
-    # Obtener las tres mejores recomendaciones
     top_recommendations = [(movie, details['link'], details['matches']) for movie, details in
                            sorted_recommendations[:3]]
 
